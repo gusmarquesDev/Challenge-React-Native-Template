@@ -1,11 +1,18 @@
+
+import * as React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Login from './src/pages/Login/Login'
-import CreateAccount from './src/pages/CreateAccount/CreateAccount';
+import { NavigationContainer } from '@react-navigation/native';
+import Routes from './src/routes/Tab.routes';
+
 
 export default function App() {
   return (
-      <CreateAccount/>
+       <>
+      <NavigationContainer>
+         <Routes/>
+      </NavigationContainer>
+   </>
   );
 }
 

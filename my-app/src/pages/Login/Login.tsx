@@ -6,13 +6,16 @@ import { Content } from '../../utils/screen/Page'
 import { Input } from '../../components/Input/Input'
 import { Button } from '../../components/Button/Button'
 import { HeaderLoginFunnel } from '../../theme/globalStyles'
-export type PropsLogin = {
+import {Tabs} from '../../routes/routes'
 
+
+export interface PropsLogin{
+ naviagtion
 }
 
 
-const Login: React.FC<PropsLogin> = ({ }) => {
 
+const Login: React.FC<PropsLogin> = ({ navigation }) => {
 
    return (
       <>
@@ -35,11 +38,12 @@ const Login: React.FC<PropsLogin> = ({ }) => {
                      </InputWraper>
                   </Content>
                   <Content>
-                  <Button valueButton='Login'/>
+                  <Button valueButton='Login' onpress={() => navigation.navigate('CreateAccount')}/>
                   </Content>
                </FullHeightScrollView>
             </SafeAreaContainer>
          </SafeAreaKeyboardContainer>
+         
       </>
    )
 }
