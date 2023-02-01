@@ -10,5 +10,5 @@ export const Content = styled.View<ContentProps>`
     padding: ${props =>
         props.withoutPaddingContent
             ? WITHOUT_PADDING
-            : ({ theme }) => `${''} ${''} ${''}`};
+            : ({ theme }) => `${'10px'} ${'20px'} ${'30px'}`};
 `

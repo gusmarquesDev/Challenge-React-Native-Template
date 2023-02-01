@@ -3,6 +3,7 @@ import { View,Text } from 'react-native'
 import {FullHeightScrollView, InputWraper} from './Login.styles'
 import { SafeAreaKeyboardContainer, SafeAreaContainer} from '../../utils/screen/SafeArea'
 import {Content} from '../../utils/screen/Page'
+import {Input} from '../../components/Input/Input'
 export type PropsLogin = {
 
 }
@@ -19,7 +20,10 @@ const Login: React.FC<PropsLogin> = ({ }) => {
                 <Content>
                    <InputWraper>
                    
-                   
+                   <Input
+                   label='Email'
+                   value={'oii'}
+                   />
                    </InputWraper>
                 </Content>
              </FullHeightScrollView>
@@ -28,3 +32,5 @@ const Login: React.FC<PropsLogin> = ({ }) => {
       </>
    )
 }
+
+export default Login
