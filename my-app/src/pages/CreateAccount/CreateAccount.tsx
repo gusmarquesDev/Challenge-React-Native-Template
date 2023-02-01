@@ -12,8 +12,7 @@ export type CreateAccount = {
 
 
 const CreateAccount: React.FC<CreateAccount> = ({ }) => {
-
-
+   
    return (
       <>
          <SafeAreaKeyboardContainer>
