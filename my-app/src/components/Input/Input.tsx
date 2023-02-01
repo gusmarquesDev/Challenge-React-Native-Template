@@ -20,12 +20,13 @@ export const Input = forwardRef(
     return(
         <>
         <InputView>
-           <InputLabel>{label}</InputLabel>
+        <InputLabel>{label}</InputLabel>
            <InputStyled
             value={value}
             ref={ref}
             {...props}
            />
+           
         </InputView>
         </>
     )

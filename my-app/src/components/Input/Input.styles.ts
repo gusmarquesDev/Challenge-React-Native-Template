@@ -6,26 +6,26 @@ interface LabelProps{
 
 } 
 export const InputView = styled.View`
-flex-direction: row;
-height: 56px;
 padding: 16px;
-padding-right: 12px;
 `
 
 export const InputLabel = styled.Text`
-    align-self: center;
-    background-color: white;
-    color: '#000';
-    font-family: regular;
-    font-size: 10px;
-    left: 12;
-    position: absolute;
+  font-family:'Sintony'
+  font-style:normal;
+  font-weight:400;
+  font-size:11px;
+  line-height:14px;
+  letter-spacing: -0.02em;
+  color:#A0A0A0;
+
 `
 
 export const InputStyled = styled(TextInput)`
-    color: '#000';
-    flex: 10;
-    font-family: regular;
-    font-size: 12px;
-    padding-vertical: 0;
+width:335px;
+heigth:148px;
+padding:10px;
+background-color:#F4F4F4;
+border-radius:4px;
+margin-bottom:15px;
+margin-top:5px;
 `
