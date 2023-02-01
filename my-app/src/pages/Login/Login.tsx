@@ -5,6 +5,7 @@ import { SafeAreaKeyboardContainer, SafeAreaContainer } from '../../utils/screen
 import { Content } from '../../utils/screen/Page'
 import { Input } from '../../components/Input/Input'
 import { Button } from '../../components/Button/Button'
+import { HeaderLoginFunnel } from '../../theme/globalStyles'
 export type PropsLogin = {
 
 }
@@ -19,6 +20,7 @@ const Login: React.FC<PropsLogin> = ({ }) => {
             <SafeAreaContainer>
                <FullHeightScrollView>
                   <Content>
+                     <HeaderLoginFunnel> Login </HeaderLoginFunnel>
                      <InputWraper>
                         <Input
                            label='E-mail'
@@ -33,7 +35,7 @@ const Login: React.FC<PropsLogin> = ({ }) => {
                      </InputWraper>
                   </Content>
                   <Content>
-                  <Button/>
+                  <Button valueButton='Login'/>
                   </Content>
                </FullHeightScrollView>
             </SafeAreaContainer>

@@ -22,7 +22,7 @@ export const InputLabel = styled.Text`
 
 export const InputStyled = styled(TextInput)`
 width:335px;
-heigth:148px;
+heigth:48px;
 padding:10px;
 background-color:#F4F4F4;
 border-radius:4px;
