@@ -6,11 +6,11 @@ import { Content } from '../../utils/screen/Page'
 import { Input } from '../../components/Input/Input'
 import { Button } from '../../components/Button/Button'
 import { HeaderLoginFunnel } from '../../theme/globalStyles'
-import {Tabs} from '../../routes/routes'
+
 
 
 export interface PropsLogin{
- naviagtion
+ navigation
 }
 
 

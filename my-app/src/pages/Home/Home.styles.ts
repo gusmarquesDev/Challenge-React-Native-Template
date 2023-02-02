@@ -7,11 +7,27 @@ export const FullHeightScrollView = styled(ScrollView).attrs({
 flex:1;
 `
 
-export const HomeHeader = styled.View`
-  
-  .WrapperHome{
-
-  }
+export const WrapperHeader = styled.View`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
 `
 
+export const Avatar = styled.View`
+background-color: #F4F4F4;
+width: 33px;
+height: 33px;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+`
+export const TextWrapper = styled.Text`
+font-size: 14px;
+font-style: normal;
+line-height: 18px;
+letter-spacing: -0.02em;
+font-weight: bold;
+color: #000;
+`
 
