@@ -7,6 +7,7 @@ import TextValue from './Header/TextValue'
 import Tag from './Tag/Tag'
 import { Line } from '../../theme/globalStyles'
 import { CardChat } from '../../components/CardChart/CardChart'
+import CardHome from './CardHome/CardHome'
 export interface PropsHome {
    navigation
 }
@@ -75,7 +76,7 @@ const Home: React.FC<PropsHome> = ({ navigation }) => {
                      }
                   />
                </WrapperFound>
-
+               <CardHome/>
             </Content>
          </SafeAreaContainer>
       </>
