@@ -14,7 +14,11 @@ letter-spacing: -0.02em;
 color: #000000;
 margin-top:100px;
 `
-
+export const Line = styled.View`
+width: 100%;
+height: 1px;
+border: 0.2px #f4f4f4;
+`
 export const Inline = styled.View`
 display:flex;
 flex-direction:row;

@@ -12,6 +12,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
+margin-bottom: 10px;
 `
 
 export const Avatar = styled.View`
@@ -29,5 +30,20 @@ line-height: 18px;
 letter-spacing: -0.02em;
 font-weight: bold;
 color: #000;
+`
+export const WrapperFound = styled.View`
+ margin-top:20px;
+
+`
+export const TitleContent = styled.Text`
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+display: flex;
+align-items: center;
+letter-spacing: -0.02em;
+
+color: #000000;
 `
 
