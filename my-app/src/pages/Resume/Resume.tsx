@@ -8,6 +8,7 @@ import { LineChart, BarChart, PieChart } from 'react-native-svg-charts'
 import ButtonDay from './ButtonDay/ButtonDay'
 import TableInfo from './TableInfo/TableInfo'
 import NewsResume from './NewResume/NewsResume'
+import Tabs from './Tabs/Tabs'
 export interface PropsResume {
     navigation
 }
@@ -45,6 +46,25 @@ const ArrayBg = [
         logo: require('../../assets/logo2.png'),
         text: 'Aspira is building a modular, direct air capture system with the energy supply integrated into the modules. Read more'
     }
+]
+
+const ArrayTabs = [
+    {
+      name:'HighLighted',
+      active:true
+    },
+    {
+        name:'Value',
+        active:false
+    },
+    {
+        name:'Vintage',
+        active:false
+    },
+    {
+        name:'Registry',
+        active:false
+    },
 ]
 const Resume: React.FC<PropsResume> = ({ navigation }) => {
     const route = useRoute();
@@ -128,6 +148,15 @@ const Resume: React.FC<PropsResume> = ({ navigation }) => {
                         <TableInfo />
                         <TitleResume>Fund Breakdown</TitleResume>
                         <FlatList
+                                showsHorizontalScrollIndicator={false}
+                                horizontal
+                                data={ArrayTabs}
+                                renderItem={({ item }) =>
+                                  <Tabs label={item.name} bg={item.active}/>
+                                }
+                            />
+                       
+                        <FlatList
                             showsHorizontalScrollIndicator={false}
                             horizontal
                             data={ArrayBg}
@@ -135,8 +164,8 @@ const Resume: React.FC<PropsResume> = ({ navigation }) => {
                                 <NewsResume imageBg={item.image} textCard={item.text} imageLogo={item.logo} />
                             }
                         />
-
                     </ContentResume>
+                    
                 </FullHeightScrollView>
             </SafeAreaContainer>
         </>

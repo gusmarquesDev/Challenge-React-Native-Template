@@ -8,7 +8,6 @@ export interface PropsButtonDay{
 }
 
 
-
 const ButtonDay: React.FC<PropsButtonDay> = ({
   onPress,
   textButton

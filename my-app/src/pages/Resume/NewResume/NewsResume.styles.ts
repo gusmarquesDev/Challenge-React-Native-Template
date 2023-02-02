@@ -28,8 +28,8 @@ font-size: 14px;
 letter-spacing: -0.02em;
 color: #000000;
 margin-top: 20px;
-
 `
+
 
 
 
