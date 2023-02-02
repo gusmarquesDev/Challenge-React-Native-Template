@@ -14,3 +14,8 @@ letter-spacing: -0.02em;
 color: #000000;
 margin-top:100px;
 `
+
+export const Inline = styled.View`
+display:flex;
+flex-direction:row;
+`

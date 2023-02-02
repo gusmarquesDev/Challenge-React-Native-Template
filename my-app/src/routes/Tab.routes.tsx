@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Login from '../pages/Login/Login'
 import CreateAccount from '../pages/CreateAccount/CreateAccount'
-
+import Home from '../pages/Home/Home';
 
 const Tab = createBottomTabNavigator();
 
@@ -29,11 +29,20 @@ function Tabs() {
       <Tab.Screen
         name="Login"
         component={Login}
-        
         options={{
             tabBarStyle:{
                 display: 'none'
             },
+        //   tabBarIcon: ({ size, color }) => (
+        //     <FontAwesome5 name="store" size={size} color={color} />
+        //   ),
+          headerShown: false,
+        }}
+      />
+       <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
         //   tabBarIcon: ({ size, color }) => (
         //     <FontAwesome5 name="store" size={size} color={color} />
         //   ),
