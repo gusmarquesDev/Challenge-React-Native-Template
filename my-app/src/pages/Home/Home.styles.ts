@@ -43,6 +43,7 @@ line-height: 23px;
 display: flex;
 align-items: center;
 letter-spacing: -0.02em;
+margin-bottom: 10px;
 
 color: #000000;
 `

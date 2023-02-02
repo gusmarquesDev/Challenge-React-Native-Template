@@ -4,9 +4,8 @@ interface ButtonProps{
 
 }
 
-export const CardContainer = styled.View`
+export const CardContainer = styled.TouchableOpacity`
 box-sizing: border-box;
-position: absolute;
 width: 140px;
 height: 160px;
 background: #FFFFFF;
