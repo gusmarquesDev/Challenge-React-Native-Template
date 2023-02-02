@@ -19,7 +19,7 @@ const CardHome: React.FC = ({
              <TextCard>Check out our top tips!</TextCard>
           </Colum>
           <Image
-             style={{ width: 50, height: 50 }}
+             style={{ width: 70, height: 70 }}
               source={require('../../../assets/CardImage.png')}
              />
       </WrapperCard>

@@ -8,6 +8,7 @@ import Tag from './Tag/Tag'
 import { Line } from '../../theme/globalStyles'
 import { CardChat } from '../../components/CardChart/CardChart'
 import CardHome from './CardHome/CardHome'
+import CardFooter from './CardFooter/CardFooter'
 export interface PropsHome {
    navigation
 }
@@ -32,8 +33,16 @@ const DATA = [
       percent: '34%',
       nameIcon: 'nature'
    },
-
 ];
+
+const TextCardFooter = [
+   {
+      text:'Why should you invest here?'
+   },
+   {
+      text:'Why should you invest here?'
+   }
+]
 
 
 const Home: React.FC<PropsHome> = ({ navigation }) => {
@@ -77,6 +86,14 @@ const Home: React.FC<PropsHome> = ({ navigation }) => {
                   />
                </WrapperFound>
                <CardHome/>
+               <FlatList
+                     showsHorizontalScrollIndicator={false}
+                     horizontal
+                     data={TextCardFooter}
+                     renderItem={({ item }) =>
+                     <CardFooter item={item.text}/>
+                     }
+                  />
             </Content>
          </SafeAreaContainer>
       </>
