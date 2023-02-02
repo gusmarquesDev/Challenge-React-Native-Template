@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../pages/Login/Login'
 import CreateAccount from '../pages/CreateAccount/CreateAccount'
 import Home from '../pages/Home/Home';
+import Resume from '../pages/Resume/Resume';
 
 const Tab = createBottomTabNavigator();
 
@@ -52,6 +53,19 @@ function Tabs() {
       <Tab.Screen
         name="CreateAccount"
         component={CreateAccount}
+        options={{
+        //   tabBarIcon: ({ size, color }) => (
+        //     <MaterialCommunityIcons
+        //       name="clipboard-list"
+        //       size={size}
+        //     />
+        //   ),
+          headerShown: false,
+        }}
+      />
+      <Tab.Screen
+        name="Resume"
+        component={Resume}
         options={{
         //   tabBarIcon: ({ size, color }) => (
         //     <MaterialCommunityIcons

@@ -9,12 +9,14 @@ interface CardChartProps {
     current: string
     percent: string
     nameIcon: string
+    onPress
 }
 export const CardChat: React.FC<CardChartProps> = ({
     titleCard,
     current,
     percent,
-    nameIcon
+    nameIcon,
+    onPress
 }) => {
     const [icon, setIcon] = useState<string>('')
 
@@ -56,7 +58,7 @@ export const CardChat: React.FC<CardChartProps> = ({
 
     return (
         <>
-            <CardContainer>
+            <CardContainer onPress={onPress}>
                 <HeaderCard>
                     <Image
                         style={{ width: 16, height: 21 }}

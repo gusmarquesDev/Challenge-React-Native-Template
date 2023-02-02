@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState}from 'react'
 import { View, Text, Image, FlatList } from 'react-native'
 import { SafeAreaContainer, } from '../../utils/screen/SafeArea'
 import { Content } from '../../utils/screen/Page'
@@ -9,6 +9,7 @@ import { Line } from '../../theme/globalStyles'
 import { CardChat } from '../../components/CardChart/CardChart'
 import CardHome from './CardHome/CardHome'
 import CardFooter from './CardFooter/CardFooter'
+import { useNavigation } from "@react-navigation/native";
 export interface PropsHome {
    navigation
 }
@@ -47,6 +48,14 @@ const TextCardFooter = [
 
 const Home: React.FC<PropsHome> = ({ navigation }) => {
 
+
+   const handlePage = (nameIcon) => {
+       navigation.navigate('Resume',{
+        nameIcon,
+        
+       });
+     };
+   
    return (
       <>
          <SafeAreaContainer>
@@ -81,7 +90,15 @@ const Home: React.FC<PropsHome> = ({ navigation }) => {
                      horizontal
                      data={DATA}
                      renderItem={({ item }) =>
-                     <Item item={item} />
+                        <View style={{ marginLeft: 10 }}>
+                           <CardChat
+                              titleCard={item.titleCard}
+                              current={item.current}
+                              percent={item.percent}
+                              nameIcon={item.nameIcon}
+                              onPress={() => handlePage(item.nameIcon)}
+                           />
+                        </View>
                      }
                   />
                </WrapperFound>
@@ -98,17 +115,8 @@ const Home: React.FC<PropsHome> = ({ navigation }) => {
          </SafeAreaContainer>
       </>
    )
-}
 
-const Item = ({ item }) => (
-   <View style={{ marginLeft: 10 }}>
-      <CardChat
-         titleCard={item.titleCard}
-         current={item.current}
-         percent={item.percent}
-         nameIcon={item.nameIcon}
-      />
-   </View>
-);
+   
+}
 
 export default Home
