@@ -2,11 +2,12 @@ import React, { useEffect } from 'react'
 import { View, Text, Image, FlatList, ScrollView } from 'react-native'
 import { SafeAreaContainer, } from '../../utils/screen/SafeArea'
 import { Content } from '../../utils/screen/Page'
-import { Inline, WrapperResume, TextChart, TextPercent,ContentResume, TitleResume } from './Resume.styles'
+import { Inline, WrapperResume, TextChart, TextPercent, ContentResume, TitleResume, FullHeightScrollView } from './Resume.styles'
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { LineChart, BarChart, PieChart } from 'react-native-svg-charts'
 import ButtonDay from './ButtonDay/ButtonDay'
 import TableInfo from './TableInfo/TableInfo'
+import NewsResume from './NewResume/NewsResume'
 export interface PropsResume {
     navigation
 }
@@ -33,12 +34,23 @@ const arrayDays = [
     }
 ]
 
+const ArrayBg = [
+    {
+        image: require('../../assets/With1.png'),
+        logo: require('../../assets/logo1.png'),
+        text: 'Aspira is building a modular, direct air capture system with the energy supply integrated into the modules. Read more'
+    },
+    {
+        image: require('../../assets/With2.png'),
+        logo: require('../../assets/logo2.png'),
+        text: 'Aspira is building a modular, direct air capture system with the energy supply integrated into the modules. Read more'
+    }
+]
 const Resume: React.FC<PropsResume> = ({ navigation }) => {
     const route = useRoute();
 
     const { nameIcon } =
         route.params as RouteParams;
-
 
     const data = [0, 40, 90, 5, 44, -24, 185, 21, 35, 53, -53, 24, 50, -20, -80]
     const fill = 'rgb(134, 65, 244)'
@@ -64,55 +76,68 @@ const Resume: React.FC<PropsResume> = ({ navigation }) => {
     return (
         <>
             <SafeAreaContainer>
-                <ContentResume>
-                    <WrapperResume>
+                <FullHeightScrollView>
+                    <ContentResume>
+                        <WrapperResume>
+                            <View>
+                                <TextChart>$18.23</TextChart>
+                                <Inline>
+                                    <Image
+                                        style={{ width: 7, height: 7 }}
+                                        source={require('../../assets/percentArrow.png')}
+                                    />
+                                    <TextPercent>3.51% (1.21)</TextPercent>
+                                </Inline>
+                            </View>
+                            <TextChart>2022</TextChart>
+                        </WrapperResume>
+
+                        {nameIcon === 'sun' && (
+                            <LineChart
+                                style={{ height: 170, with: 100 }}
+                                data={data}
+                                svg={{ stroke: 'rgb(134, 65, 244)' }}
+                                contentInset={{ top: 20, bottom: 20 }}
+                            >
+                            </LineChart>
+
+                        )}
+                        {nameIcon === 'wind' && (
+                            <BarChart style={{ height: 170, with: 100 }} data={data} svg={{ fill }} contentInset={{ top: 30, bottom: 30 }}>
+                            </BarChart>
+
+                        )}
+                        {nameIcon === 'nature' && (
+                            <PieChart style={{ height: 170 }} data={pieData} />
+
+                        )}
                         <View>
-                            <TextChart>$18.23</TextChart>
-                            <Inline>
-                                <Image
-                                    style={{ width: 7, height: 7 }}
-                                    source={require('../../assets/percentArrow.png')}
-                                />
-                                <TextPercent>3.51% (1.21)</TextPercent>
-                            </Inline>
+                            <FlatList
+                                showsHorizontalScrollIndicator={false}
+                                horizontal
+                                style={{
+                                    marginHorizontal: 30, marginVertical: 30
+                                }}
+                                data={arrayDays}
+                                renderItem={({ item }) =>
+                                    <ButtonDay onPress={() => handleDay} textButton={item.label} />
+                                }
+                            />
                         </View>
-                        <TextChart>2022</TextChart>
-                    </WrapperResume>
+                        <TitleResume>Info & Stats</TitleResume>
+                        <TableInfo />
+                        <TitleResume>Fund Breakdown</TitleResume>
+                        <FlatList
+                            showsHorizontalScrollIndicator={false}
+                            horizontal
+                            data={ArrayBg}
+                            renderItem={({ item }) =>
+                                <NewsResume imageBg={item.image} textCard={item.text} imageLogo={item.logo} />
+                            }
+                        />
 
-                    {nameIcon === 'sun' && (    
-                        <LineChart
-                            style={{ height: 170, with: 100 }}
-                            data={data}
-                            svg={{ stroke: 'rgb(134, 65, 244)' }}
-                            contentInset={{ top: 20, bottom: 20 }}
-                        >
-                        </LineChart>
-                        
-                    )}
-                    {nameIcon === 'wind' && (
-                        <BarChart style={{ height: 170, with: 100 }} data={data} svg={{ fill }} contentInset={{ top: 30, bottom: 30 }}>
-                        </BarChart>
-
-                    )}
-                    {nameIcon === 'nature' && (
-                        <PieChart style={{ height: 170 }} data={pieData} />
-
-                    )}
-                    <View>
-                      <FlatList
-                     showsHorizontalScrollIndicator={false}
-                     horizontal
-                     style={{
-                        marginHorizontal:30, marginVertical:30}}
-                     data={arrayDays}
-                     renderItem={({ item }) =>
-                       <ButtonDay onPress={() => handleDay} textButton={item.label} />
-                     }
-                  />
-                  </View>
-                  <TitleResume>Info & Stats</TitleResume>
-                   <TableInfo/>
-                </ContentResume>
+                    </ContentResume>
+                </FullHeightScrollView>
             </SafeAreaContainer>
         </>
     )

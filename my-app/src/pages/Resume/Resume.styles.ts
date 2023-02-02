@@ -1,6 +1,13 @@
 import styled from "styled-components/native"
 
+import { ScrollView } from 'react-native'
 
+
+export const FullHeightScrollView = styled(ScrollView).attrs({
+    flexGrow:1
+})`
+flex:1;
+`
 
 export const ContentResume = styled.View`
 padding:10px;
