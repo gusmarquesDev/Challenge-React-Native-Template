@@ -16,7 +16,7 @@ const NewsResume: React.FC<PropsNewsResume> = ({
 }) => {
 
     return (
-        <>  
+        <>
             <CardResume>
                 <ImageBackground source={imageBg ? imageBg : require('../../../assets/With1.png')} resizeMode="cover">
                     <CardResumeHeader>

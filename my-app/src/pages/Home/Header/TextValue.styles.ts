@@ -2,7 +2,7 @@ import { ScrollView } from 'react-native'
 import styled from "styled-components/native"
 
 export const FullHeightScrollView = styled(ScrollView).attrs({
-    flexGrow:1
+    flexGrow: 1
 })`
 flex:1;
 `
@@ -49,7 +49,7 @@ line-height: 18px;
 letter-spacing: -0.02em;
 color: #0FDF8F;
 `
-export const  WrapperInnline = styled.View`
+export const WrapperInnline = styled.View`
 display:flex;
 flex-direction:row;
 justify-content:space-around;

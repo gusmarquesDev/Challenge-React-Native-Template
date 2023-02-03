@@ -1,13 +1,13 @@
-import styled,{css} from 'styled-components/native'
+import styled, { css } from 'styled-components/native'
 
-interface ButtonProps{
-bg:string;
-color:string;
-border:string;
+interface ButtonProps {
+    bg: string;
+    color: string;
+    border: string;
 }
 
 export const LabelButton = styled.Text<ButtonProps>`
-${({ color  }) => css`
+${({ color }) => css`
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
@@ -20,7 +20,7 @@ color: ${color ? color : '#fff'};
 `}`
 
 export const ContainerButton = styled.TouchableHighlight <ButtonProps>`
-${({ bg, color,border }) => css`
+${({ bg, color, border }) => css`
 flex-direction: row;
 margin:10px;
 justify-content: center;

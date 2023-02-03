@@ -1,10 +1,10 @@
-import {Ref} from 'react'
+import { Ref } from 'react'
 import { TextInput, TextInputProps } from 'react-native'
 import styled from 'styled-components/native'
 
-interface LabelProps{ 
+interface LabelProps {
 
-} 
+}
 export const InputView = styled.View`
 padding: 16px;
 `

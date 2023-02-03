@@ -14,7 +14,7 @@ export const CardResumeHeader = styled.View`
 width: 100%;
 height: 30%;
 `
-export const CardResumeBody =  styled.View`
+export const CardResumeBody = styled.View`
 width: 100%;
 height: 70%;
 padding: 5px;

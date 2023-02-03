@@ -4,7 +4,7 @@ import { ScrollView } from 'react-native'
 
 
 export const FullHeightScrollView = styled(ScrollView).attrs({
-    flexGrow:1
+    flexGrow: 1
 })`
 flex:1;
 `

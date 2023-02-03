@@ -1,6 +1,6 @@
 import React from 'react'
 import { Image, View } from 'react-native'
-import {WrapperInfo, WrapperColumn ,LightTextResume, TextResume} from './TableInfo.styles'
+import { WrapperInfo, WrapperColumn, LightTextResume, TextResume } from './TableInfo.styles'
 
 export interface PropsTableInfo {
 
@@ -25,7 +25,7 @@ const TableInfo: React.FC<PropsTableInfo> = ({
                     <LightTextResume>TER</LightTextResume>
                     <TextResume>0.15%</TextResume>
                 </WrapperColumn>
-               
+
             </WrapperInfo>
 
 

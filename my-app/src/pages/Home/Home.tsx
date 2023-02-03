@@ -1,4 +1,4 @@
-import React, {useEffect, useState}from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, Text, Image, FlatList } from 'react-native'
 import { SafeAreaContainer, } from '../../utils/screen/SafeArea'
 import { Content } from '../../utils/screen/Page'
@@ -38,10 +38,10 @@ const DATA = [
 
 const TextCardFooter = [
    {
-      text:'Why should you invest here?'
+      text: 'Why should you invest here?'
    },
    {
-      text:'Why should you invest here?'
+      text: 'Why should you invest here?'
    }
 ]
 
@@ -49,14 +49,14 @@ const TextCardFooter = [
 const Home: React.FC<PropsHome> = ({ navigation }) => {
 
 
-   const handlePage = (nameIcon,namePage) => {
-       navigation.navigate('Resume',{
-        nameIcon,
-        namePage
-        
-       });
-     };
-   
+   const handlePage = (nameIcon, namePage) => {
+      navigation.navigate('Resume', {
+         nameIcon,
+         namePage
+
+      });
+   };
+
    return (
       <>
          <SafeAreaContainer>
@@ -103,21 +103,21 @@ const Home: React.FC<PropsHome> = ({ navigation }) => {
                      }
                   />
                </WrapperFound>
-               <CardHome/>
+               <CardHome />
                <FlatList
-                     showsHorizontalScrollIndicator={false}
-                     horizontal
-                     data={TextCardFooter}
-                     renderItem={({ item }) =>
-                     <CardFooter item={item.text}/>
-                     }
-                  />
+                  showsHorizontalScrollIndicator={false}
+                  horizontal
+                  data={TextCardFooter}
+                  renderItem={({ item }) =>
+                     <CardFooter item={item.text} />
+                  }
+               />
             </Content>
          </SafeAreaContainer>
       </>
    )
 
-   
+
 }
 
 export default Home

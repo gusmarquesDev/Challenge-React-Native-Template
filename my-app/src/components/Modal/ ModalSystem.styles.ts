@@ -7,7 +7,7 @@ export const Container = styled.View`
   height: 200px;
   justify-content: center;
   align-items: center;
-`;  
+`;
 
 export const ModalContainer = styled.View`
   background-color: #F4F4F4;

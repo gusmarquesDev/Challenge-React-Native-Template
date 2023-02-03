@@ -1,5 +1,5 @@
 import React from "react";
-import styled,{css} from "styled-components/native";
+import styled, { css } from "styled-components/native";
 
 export const HeaderLoginFunnel = styled.Text`
 font-family: 'Sora';

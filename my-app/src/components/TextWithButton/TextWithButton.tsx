@@ -1,13 +1,13 @@
-import React,{FC, SetStateAction, useState} from 'react';
-import { TouchableOpacity} from 'react-native'
-import { Content,TextContent } from './TextWithButton.styles';
+import React, { FC, SetStateAction, useState } from 'react';
+import { TouchableOpacity } from 'react-native'
+import { Content, TextContent } from './TextWithButton.styles';
 
 export interface TextWithButtonProps {
-    beforeText:string
-    onPress
-    textInsideButton:string
-    afterButton?:string
-  }
+  beforeText: string
+  onPress
+  textInsideButton: string
+  afterButton?: string
+}
 
 export const TextWithButton: React.FC<TextWithButtonProps> = ({
   beforeText,
@@ -16,19 +16,19 @@ export const TextWithButton: React.FC<TextWithButtonProps> = ({
   afterButton
 }) => {
 
-  return(
+  return (
     <>
-    <Content>
-     <TextContent>
-        {beforeText}
-     </TextContent>
-     <TouchableOpacity onPress={onPress}>
-        <TextContent>{textInsideButton}</TextContent>
-     </TouchableOpacity>
-     <TextContent>
-        {afterButton}
-     </TextContent>
-    </Content>
+      <Content>
+        <TextContent>
+          {beforeText}
+        </TextContent>
+        <TouchableOpacity onPress={onPress}>
+          <TextContent>{textInsideButton}</TextContent>
+        </TouchableOpacity>
+        <TextContent>
+          {afterButton}
+        </TextContent>
+      </Content>
     </>
   )
 }

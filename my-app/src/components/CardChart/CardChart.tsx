@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { View, Text, Image } from 'react-native'
 import { CardContainer, TitleCard, HeaderCard, FooterCard, ContentCard, TextCurrent, TextPercent } from './CardChart.styles'
-import { LineChart, AreaChart, BarChart, PieChart} from 'react-native-svg-charts'
+import { LineChart, AreaChart, BarChart, PieChart } from 'react-native-svg-charts'
 import * as shape from 'd3-shape'
 
 interface CardChartProps {
@@ -22,7 +22,7 @@ export const CardChat: React.FC<CardChartProps> = ({
 
     const data = [50, 10, 40, 95, -4, -24, 85, 91, 35, 53, -53, 24, 50, -20, -80]
     const fill = 'rgb(134, 65, 244)'
-    
+
     const randomColor = () => ('#' + ((Math.random() * 0xffffff) << 0).toString(16) + '000000').slice(0, 7)
 
     const pieData = data
@@ -78,12 +78,12 @@ export const CardChat: React.FC<CardChartProps> = ({
                     )}
                     {nameIcon === 'wind' && (
                         <BarChart style={{ height: 70 }} data={data} svg={{ fill }} contentInset={{ top: 30, bottom: 30 }}>
-                         </BarChart>
-                   
+                        </BarChart>
+
                     )}
-                     {nameIcon === 'nature' && (
+                    {nameIcon === 'nature' && (
                         <PieChart style={{ height: 70 }} data={pieData} />
-                   
+
                     )}
 
                 </ContentCard>

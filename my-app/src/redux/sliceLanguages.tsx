@@ -1,20 +1,20 @@
-import { createSlice, PayloadAction} from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 
 
 interface DataUser {
-    name:string
+    name: string
 }
 
 const INITIAL_STATE: DataUser[] = [
-  {name: 'completou'}
+    { name: '' }
 ]
 const sliceDataUser = createSlice({
     name: 'dataUser',
     initialState: INITIAL_STATE,
     reducers: {
-        addDataUser(state, { payload }: PayloadAction<string> ){
-            return [...state, {name: payload }]
+        addDataUser(state, { payload }: PayloadAction<string>) {
+            return [...state, { name: payload }]
         }
     }
 })

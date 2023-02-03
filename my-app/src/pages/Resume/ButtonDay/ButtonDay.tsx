@@ -1,22 +1,22 @@
 import React from 'react'
-import { Image,View} from 'react-native'
-import { WrapperButton, TextButton} from './Button.styles'
+import { Image, View } from 'react-native'
+import { WrapperButton, TextButton } from './Button.styles'
 
-export interface PropsButtonDay{
- onPress,
- textButton
+export interface PropsButtonDay {
+   onPress,
+   textButton
 }
 
 
 const ButtonDay: React.FC<PropsButtonDay> = ({
-  onPress,
-  textButton
- }) => {      
+   onPress,
+   textButton
+}) => {
    return (
       <>
-      <WrapperButton onPress={onPress}>
-          <TextButton>{textButton}</TextButton>
-      </WrapperButton>
+         <WrapperButton onPress={onPress}>
+            <TextButton>{textButton}</TextButton>
+         </WrapperButton>
       </>
    )
 }

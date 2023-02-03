@@ -1,21 +1,21 @@
 import React from 'react'
-import { Image,View} from 'react-native'
-import { WrapperCard, TitleCardFooter} from './CardFooter.styles'
+import { Image, View } from 'react-native'
+import { WrapperCard, TitleCardFooter } from './CardFooter.styles'
 
-export interface PropsCardFooter{
-item:string
+export interface PropsCardFooter {
+   item: string
 }
 
 
 
 const CardFooter: React.FC<PropsCardFooter> = ({
-  item
- }) => {      
+   item
+}) => {
    return (
       <>
-      <WrapperCard>
-         <TitleCardFooter>{item}</TitleCardFooter>
-      </WrapperCard>
+         <WrapperCard>
+            <TitleCardFooter>{item}</TitleCardFooter>
+         </WrapperCard>
       </>
    )
 }

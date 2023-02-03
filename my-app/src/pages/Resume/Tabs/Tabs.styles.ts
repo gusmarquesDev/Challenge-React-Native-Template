@@ -1,8 +1,8 @@
-import styled,{css} from "styled-components/native"
+import styled, { css } from "styled-components/native"
 
 
-interface TabsProps{
-    bg:boolean;
+interface TabsProps {
+    bg: boolean;
 }
 
 export const TabsView = styled.View`
