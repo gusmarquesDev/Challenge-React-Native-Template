@@ -70,12 +70,21 @@ font-family: 'Sora';
 font-style: normal;
 font-weight: 600;
 font-size: 17px;
-line-height: 21px;
-letter-spacing: -0.02em;
 color: #000000;
 margin-top:15px;
 margin-bottom: 20px;
 `
+export const TitleResumePortFolio = styled.Text`
+font-family: 'Sora';
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+color: #000000;
+margin-top:15px;
+margin-bottom: 20px;
+`
+
+
 export const TextResume = styled.Text`
 font-family: 'Sora';
 font-style: normal;
@@ -83,5 +92,47 @@ font-weight: 400;
 font-size: 14px;
 color: #000000;
 `
+export const InlineView = styled.View`
+flex-direction: row;
+align-items: center;
+`
 
+export const ColumnButtons = styled.View`
+flex-direction: column;
+width: 50%;
+`
+export const InlineViewBetween = styled.View`
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+`
+
+export const LightText = styled.Text`
+font-family: 'Sora';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: #A0A0A0;
+`
+
+export const LightTextCenter = styled.Text`
+font-family: 'Sora';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: #A0A0A0;
+text-align: center;
+`
+export const CardInfo = styled.View`
+flex-direction: row;
+padding: 10px;
+align-self: center;
+text-align: left;
+margin-top: 20px;
+margin-bottom: 20px;
+width: 335px;
+height: 115px;
+background: #F4F4F4;
+border-radius: 4px;
+`
 

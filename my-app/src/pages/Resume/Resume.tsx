@@ -2,13 +2,15 @@ import React, { useEffect } from 'react'
 import { View, Text, Image, FlatList, ScrollView } from 'react-native'
 import { SafeAreaContainer, } from '../../utils/screen/SafeArea'
 import { Content } from '../../utils/screen/Page'
-import { Inline, WrapperResume, TextChart, TextPercent, ContentResume, TitleResume, FullHeightScrollView } from './Resume.styles'
+import { Inline, WrapperResume, TextChart, LightText, TextPercent, CardInfo,InlineViewBetween, ColumnButtons, TitleResumePortFolio, ContentResume, TitleResume, FullHeightScrollView, InlineView } from './Resume.styles'
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { LineChart, BarChart, PieChart } from 'react-native-svg-charts'
 import ButtonDay from './ButtonDay/ButtonDay'
 import TableInfo from './TableInfo/TableInfo'
 import NewsResume from './NewResume/NewsResume'
 import Tabs from './Tabs/Tabs'
+import { Button } from '../../components/Button/Button'
+import theme from '../../theme/theme'
 export interface PropsResume {
     navigation
 }
@@ -50,20 +52,20 @@ const ArrayBg = [
 
 const ArrayTabs = [
     {
-      name:'HighLighted',
-      active:true
+        name: 'HighLighted',
+        active: true
     },
     {
-        name:'Value',
-        active:false
+        name: 'Value',
+        active: false
     },
     {
-        name:'Vintage',
-        active:false
+        name: 'Vintage',
+        active: false
     },
     {
-        name:'Registry',
-        active:false
+        name: 'Registry',
+        active: false
     },
 ]
 const Resume: React.FC<PropsResume> = ({ navigation }) => {
@@ -148,14 +150,14 @@ const Resume: React.FC<PropsResume> = ({ navigation }) => {
                         <TableInfo />
                         <TitleResume>Fund Breakdown</TitleResume>
                         <FlatList
-                                showsHorizontalScrollIndicator={false}
-                                horizontal
-                                data={ArrayTabs}
-                                renderItem={({ item }) =>
-                                  <Tabs label={item.name} bg={item.active}/>
-                                }
-                            />
-                       
+                            showsHorizontalScrollIndicator={false}
+                            horizontal
+                            data={ArrayTabs}
+                            renderItem={({ item }) =>
+                                <Tabs label={item.name} bg={item.active} />
+                            }
+                        />
+
                         <FlatList
                             showsHorizontalScrollIndicator={false}
                             horizontal
@@ -164,8 +166,48 @@ const Resume: React.FC<PropsResume> = ({ navigation }) => {
                                 <NewsResume imageBg={item.image} textCard={item.text} imageLogo={item.logo} />
                             }
                         />
+                        <InlineView>
+                            <Image
+                                style={{ width: 20, height: 20, marginHorizontal: 5 }}
+                                source={require('../../assets/PortIcon.png')}
+                            />
+                            <TitleResume>Your PortFolio</TitleResume>
+                        </InlineView>
+                        <InlineViewBetween>
+                            <TitleResumePortFolio>18 credits</TitleResumePortFolio>
+                            <TitleResumePortFolio>$328.14</TitleResumePortFolio>
+                        </InlineViewBetween>
+                        <InlineViewBetween>
+                            <InlineView>
+                                <Image
+                                    style={{ width: 7, height: 7, marginHorizontal: 5 }}
+                                    source={require('../../assets/percentArrow.png')}
+                                />
+                                <TextPercent>8.41%</TextPercent>
+                            </InlineView>
+                            <LightText>Last purchase 28d ago</LightText>
+                        </InlineViewBetween>
+                        <InlineViewBetween>
+                            <ColumnButtons>
+                                <Button bg={theme.background.bgOutLine} color={theme.color.colorOutline} border={theme.border.borderOutline} valueButton='Sell' />
+                            </ColumnButtons>
+                            <ColumnButtons>
+                                <Button bg={theme.background.bgSecondary} color={theme.color.colorPrimary} border={theme.border.borderSecondary} valueButton='Retired Credits' />
+                            </ColumnButtons>
+
+                        </InlineViewBetween>
+                        <InlineViewBetween>
+                            <LightText>You’ve previously retired 28 credits of this asset</LightText>
+                        </InlineViewBetween>
+                        
+                        <CardInfo>
+                           <LightText>
+                             Please note that prices are for reference only and may vary at the time of excecuting a buy or sell order. 
+                             The information provided is not investment advice, and should not be used as a recommendation to buy or sell assets.
+                           </LightText>
+                        </CardInfo>
+                        <Button bg={theme.background.bgPrimary} color={theme.color.colorPrimary} border={theme.border.borderOutline} valueButton='buy' />
                     </ContentResume>
-                    
                 </FullHeightScrollView>
             </SafeAreaContainer>
         </>

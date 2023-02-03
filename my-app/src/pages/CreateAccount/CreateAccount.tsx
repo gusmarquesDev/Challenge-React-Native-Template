@@ -7,7 +7,7 @@ import { Input } from '../../components/Input/Input'
 import { Button } from '../../components/Button/Button'
 import { HeaderLoginFunnel } from '../../theme/globalStyles'
 import { MyCheckbox } from '../../components/CheckBox/MyCheckBox'
-
+import theme from '../../theme/theme'
 export type CreateAccount = {
 
 }
@@ -53,7 +53,7 @@ const CreateAccount: React.FC<CreateAccount> = ({ }) => {
                      onPress={HandleCheck}/>
                   </Content>
                   <Content>
-                      <Button valueButton='Criar Conta'/>
+                      <Button bg={theme.background.bgPrimary} color={theme.color.colorSecondary}  border={theme.border.borderSecondary} valueButton='Criar Conta'/>
                   </Content>
                </FullHeightScrollView>
                

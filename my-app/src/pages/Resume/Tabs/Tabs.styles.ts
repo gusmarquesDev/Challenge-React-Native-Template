@@ -16,7 +16,7 @@ font-style: normal;
 font-weight: ${bg ? 600 : 400};
 font-size: 14px;
 margin-right: 10px;
-color: #000000;
+color: ${bg ? '#000' : '#A0A0A0'};
 `}`
 
 export const TabsActive = styled.View<TabsProps>`

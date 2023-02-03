@@ -1,11 +1,18 @@
 export default {
-    colors:{
+        background:{
+            bgPrimary:'#770FDF',
+            bgOutLine:'transparent',
+            bgSecondary:'#0FDF8F',
+        },
+        color:{
+            colorPrimary:'#fff',
+            colorSecondary:'#444',
+            colorOutline: '#770FDF'
 
-    },
-    fontSize:{
-
-    },
-    fonts:{
-        
-    }
-}
+        },
+        border:{
+            borderOutline: '1px #CFCFCF',
+            borderSecondary:'#0FDF8F'
+    
+        }
+    } 

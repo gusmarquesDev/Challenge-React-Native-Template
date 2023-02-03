@@ -6,7 +6,7 @@ import { Content } from '../../utils/screen/Page'
 import { Input } from '../../components/Input/Input'
 import { Button } from '../../components/Button/Button'
 import { HeaderLoginFunnel } from '../../theme/globalStyles'
-
+import theme from '../../theme/theme'
 
 
 export interface PropsLogin{
@@ -38,7 +38,7 @@ const Login: React.FC<PropsLogin> = ({ navigation }) => {
                      </InputWraper>
                   </Content>
                   <Content>
-                  <Button valueButton='Login' onpress={() => navigation.navigate('CreateAccount')}/>
+                  <Button  bg={theme.background.bgPrimary} color={theme.color.colorSecondary} border={theme.border.borderSecondary} valueButton='Login' onpress={() => navigation.navigate('CreateAccount')}/>
                   </Content>
                </FullHeightScrollView>
             </SafeAreaContainer>
