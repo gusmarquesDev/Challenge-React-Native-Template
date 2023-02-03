@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { View, Text, Image, FlatList, ScrollView,TouchableOpacity } from 'react-native'
+import { View, Text, Image, FlatList, ScrollView, TouchableOpacity } from 'react-native'
 import { SafeAreaContainer, } from '../../utils/screen/SafeArea'
 import { Content } from '../../utils/screen/Page'
 import { Inline, WrapperResume, TextChart, TitleHeader, LightText, TextPercent, CardInfo, InlineViewBetween, ColumnButtons, TitleResumePortFolio, ContentResume, TitleResume, FullHeightScrollView, InlineView } from './Resume.styles'
@@ -102,38 +102,36 @@ const Resume: React.FC<PropsResume> = ({ navigation }) => {
             <SafeAreaContainer>
                 <HeaderRNE
                     backgroundColor={'#fff'}
-                    style={{marginBottom:'20px'}}
-                    containerStyle={{marginTop:-40}}
-                        leftComponent={
-                            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+                    style={{ marginBottom: '20px' }}
+                    containerStyle={{ marginTop: -40 }}
+                    leftComponent={
+                        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
                             <Image
                                 style={{ width: 18, height: 16 }}
                                 source={require('../../assets/arrow.png')}
-                            
-                            />
-                          </TouchableOpacity>
-                        }
-                         centerComponent={<TitleHeader>{namePage}</TitleHeader>
 
-                        }
-                    />
+                            />
+                        </TouchableOpacity>
+                    }
+                    centerComponent={<TitleHeader>{namePage}</TitleHeader>
+
+                    }
+                />
                 <FullHeightScrollView>
                     <ContentResume>
-
                         <WrapperResume>
-                            <View>
-                                <TextChart>$18.23</TextChart>
-                                <Inline>
-                                    <Image
-                                        style={{ width: 7, height: 7 }}
-                                        source={require('../../assets/percentArrow.png')}
-                                    />
-                                    <TextPercent>3.51% (1.21)</TextPercent>
-                                </Inline>
-                            </View>
+                            <TextChart>$18.23</TextChart>
                             <TextChart>2022</TextChart>
                         </WrapperResume>
-
+                        <WrapperResume>
+                            <Inline>
+                                <Image
+                                    style={{ width: 7, height: 7 }}
+                                    source={require('../../assets/percentArrow.png')}
+                                />
+                                <TextPercent>3.51% (1.21)</TextPercent>
+                            </Inline>
+                        </WrapperResume>
                         {nameIcon === 'sun' && (
                             <LineChart
                                 style={{ height: 170, with: 100 }}

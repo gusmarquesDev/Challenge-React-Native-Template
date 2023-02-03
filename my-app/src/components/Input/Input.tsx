@@ -1,10 +1,13 @@
-import React,{ forwardRef,Ref } from "react";
+import React,{ forwardRef,Ref,useState } from "react";
 import { TextInput } from "react-native";
 import {InputView, InputLabel, InputStyled} from './Input.styles'
+import {Icon} from 'react-native-elements'
 
 export interface InputProps{
-  value:string| undefined
+  value?:string| undefined
   label:string
+  onChangeText
+  hidePassword?:boolean
 }
 
 export const Input = forwardRef(
@@ -12,6 +15,8 @@ export const Input = forwardRef(
         {
             value,
             label,
+            onChangeText,
+            hidePassword,
             ...props
 
 }:InputProps ,
@@ -24,9 +29,10 @@ export const Input = forwardRef(
            <InputStyled
             value={value}
             ref={ref}
+            onChangeText={onChangeText}
+            secureTextEntry={hidePassword}
             {...props}
            />
-           
         </InputView>
         </>
     )

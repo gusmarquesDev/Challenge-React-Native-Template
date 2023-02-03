@@ -73,6 +73,7 @@ function Tabs() {
               source={require('../assets/MenuTrade.png')}
             />
           ),
+          tabBarButton: () => null,
           headerShown: false,
         }}
       />

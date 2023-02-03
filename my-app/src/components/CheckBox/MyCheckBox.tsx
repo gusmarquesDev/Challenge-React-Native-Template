@@ -1,6 +1,6 @@
 import React,{FC, SetStateAction, useState} from 'react';
 import { Box, LabelBox, ContentBox} from './MyCheckBox.styles';
-
+import {Icon} from 'react-native-elements'
 export interface CheckBoxProps {
   isChecked:boolean
   label:string
@@ -17,7 +17,12 @@ onPress
     <>
     <ContentBox>
     <Box isChecked={isChecked} onPress={onPress}>
-       {isChecked && 'oii'}
+       {isChecked && 
+       <Icon name='check' 
+       type='font-awesome' 
+       color='#000' 
+       size={10}
+       />}
     </Box>
     <LabelBox>{label}</LabelBox>
     </ContentBox>

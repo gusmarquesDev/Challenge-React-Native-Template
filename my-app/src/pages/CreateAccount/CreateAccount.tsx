@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
 import { View, Text } from 'react-native'
 import { FullHeightScrollView, InputWraper } from '.././Login/Login.styles'
 import { SafeAreaKeyboardContainer, SafeAreaContainer } from '../../utils/screen/SafeArea'
@@ -9,6 +9,8 @@ import { HeaderLoginFunnel } from '../../theme/globalStyles'
 import { MyCheckbox } from '../../components/CheckBox/MyCheckBox'
 import theme from '../../theme/theme'
 
+import { ErrorMensage } from './CreateAccount.styles'
+
 
 export type CreateAccount = {
 navigation
@@ -17,14 +19,40 @@ navigation
 
 const CreateAccount: React.FC<CreateAccount> = ({ navigation }) => {
    const [isCheck, setChecked] = useState(false)
+   const [errorMensage, setError ] = useState('')
 
    const HandleCheck = () => {
-    
+     setChecked(!isCheck)
    }
 
    const handleNavigatio = () => {
 
    }
+
+   const handleName = (e) =>{
+
+   }
+   const handleLastName = (e) => {
+
+   }
+
+   const handlePassWord = (e) => {
+
+   }
+
+   const createAccount = () => {
+      if(isCheck === false){
+         setError('Accpte de termns, please!!')
+      }else if(isCheck === true){
+         navigation.navigate('Login')
+      }
+   }
+
+   useEffect(()=>{
+      setError('')
+   },[isCheck === true])
+
+
 
    return (
       <>
@@ -38,19 +66,19 @@ const CreateAccount: React.FC<CreateAccount> = ({ navigation }) => {
                      <InputWraper>
                         <Input
                            label='First Name'
-                           value={'value'}
+                           onChangeText={(e)=> handleName(e)}
                         />
                      </InputWraper>
                      <InputWraper>
                         <Input
                            label='Last Name'
-                           value={'value'}
+                           onChangeText={(e) => handleLastName(e)}
                         />
                      </InputWraper>
                      <InputWraper>
                         <Input
                            label='Password'
-                           value={'value'}
+                           onChangeText={(e) => handlePassWord(e)}
                         />
                      </InputWraper>
                      <MyCheckbox 
@@ -61,12 +89,14 @@ const CreateAccount: React.FC<CreateAccount> = ({ navigation }) => {
                   <Content>
                       <Button 
                       bg={theme.background.bgPrimary} 
-                      color={theme.color.colorSecondary}  
-                      border={theme.border.borderSecondary} 
+                      color={theme.color.colorPrimary}  
+                      border={theme.border.borderOutline} 
                       valueButton='Criar Conta'
-                      onpress={() => navigation.navigate('Home')}
+                      onpress={() => createAccount()}
                       />
+                      
                   </Content>
+                  <ErrorMensage>{String(errorMensage)}</ErrorMensage>
                </FullHeightScrollView>
                
             </SafeAreaContainer>

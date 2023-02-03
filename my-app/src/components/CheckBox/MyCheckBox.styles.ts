@@ -4,6 +4,7 @@ import styled from 'styled-components/native'
 
 export const ContentBox = styled.View`
     flex-direction:row;
+    justify-content: center;
     aling-items:center;
     padding:20px;
 `
@@ -12,6 +13,9 @@ export const Box = styled.TouchableOpacity<CheckBoxProps>`
     height:15px;
     border:1px #000;
     border-radius:5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 `
 

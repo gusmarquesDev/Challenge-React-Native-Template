@@ -11,3 +11,13 @@ export const InputWraper = styled.View`
  margin-botton:5px;
 `
 
+export const TextSignUp = styled.Text`
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+letter-spacing: -0.02em;
+color: #A0A0A0;
+text-align: center;
+`
+

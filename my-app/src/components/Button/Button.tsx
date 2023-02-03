@@ -7,6 +7,7 @@ onpress?: () => void
 bg:string
 color:string
 border:string
+disable?
 }
 export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
     valueButton,
@@ -14,10 +15,11 @@ export const Button: React.FC<PropsWithChildren<ButtonProps>> = ({
     color,
     border,
     onpress,
+    disable,
    ...props
 }) => {
     return(
-   <ContainerButton bg={bg} color={color} border={border} onPress={onpress}>
+   <ContainerButton bg={bg} color={color} border={border} onPress={onpress} disabled={disable}>
        <LabelButton color={color}>{valueButton}</LabelButton>
    </ContainerButton>
     )

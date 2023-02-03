@@ -11,21 +11,25 @@ padding: 16px;
 
 export const InputLabel = styled.Text`
   font-family:'Sintony'
-  font-style:normal;
-  font-weight:400;
+  font-style: normal;
+  font-weight:400px;
   font-size:11px;
   line-height:14px;
   letter-spacing: -0.02em;
   color:#A0A0A0;
-
 `
 
 export const InputStyled = styled(TextInput)`
 width:335px;
-heigth:48px;
+height:48px;
 padding:10px;
 background-color:#F4F4F4;
 border-radius:4px;
 margin-bottom:15px;
 margin-top:5px;
+`
+export const InputPasswordSection = styled.View`
+flex-direction: row;
+justify-content: center;
+
 `
