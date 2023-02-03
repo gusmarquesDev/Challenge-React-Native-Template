@@ -49,9 +49,10 @@ const TextCardFooter = [
 const Home: React.FC<PropsHome> = ({ navigation }) => {
 
 
-   const handlePage = (nameIcon) => {
+   const handlePage = (nameIcon,namePage) => {
        navigation.navigate('Resume',{
         nameIcon,
+        namePage
         
        });
      };
@@ -96,7 +97,7 @@ const Home: React.FC<PropsHome> = ({ navigation }) => {
                               current={item.current}
                               percent={item.percent}
                               nameIcon={item.nameIcon}
-                              onPress={() => handlePage(item.nameIcon)}
+                              onPress={() => handlePage(item.nameIcon, item.titleCard)}
                            />
                         </View>
                      }

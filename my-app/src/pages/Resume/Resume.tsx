@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
-import { View, Text, Image, FlatList, ScrollView } from 'react-native'
+import { View, Text, Image, FlatList, ScrollView,TouchableOpacity } from 'react-native'
 import { SafeAreaContainer, } from '../../utils/screen/SafeArea'
 import { Content } from '../../utils/screen/Page'
-import { Inline, WrapperResume, TextChart, LightText, TextPercent, CardInfo,InlineViewBetween, ColumnButtons, TitleResumePortFolio, ContentResume, TitleResume, FullHeightScrollView, InlineView } from './Resume.styles'
+import { Inline, WrapperResume, TextChart, TitleHeader, LightText, TextPercent, CardInfo, InlineViewBetween, ColumnButtons, TitleResumePortFolio, ContentResume, TitleResume, FullHeightScrollView, InlineView } from './Resume.styles'
 import { useRoute, useNavigation } from "@react-navigation/native";
 import { LineChart, BarChart, PieChart } from 'react-native-svg-charts'
 import ButtonDay from './ButtonDay/ButtonDay'
@@ -11,12 +11,14 @@ import NewsResume from './NewResume/NewsResume'
 import Tabs from './Tabs/Tabs'
 import { Button } from '../../components/Button/Button'
 import theme from '../../theme/theme'
+import { Header as HeaderRNE, HeaderProps, Icon } from '@rneui/themed';
 export interface PropsResume {
     navigation
 }
 
 type RouteParams = {
     nameIcon: string
+    namePage: string
 };
 
 const arrayDays = [
@@ -71,7 +73,7 @@ const ArrayTabs = [
 const Resume: React.FC<PropsResume> = ({ navigation }) => {
     const route = useRoute();
 
-    const { nameIcon } =
+    const { nameIcon, namePage } =
         route.params as RouteParams;
 
     const data = [0, 40, 90, 5, 44, -24, 185, 21, 35, 53, -53, 24, 50, -20, -80]
@@ -98,8 +100,26 @@ const Resume: React.FC<PropsResume> = ({ navigation }) => {
     return (
         <>
             <SafeAreaContainer>
+                <HeaderRNE
+                    backgroundColor={'#fff'}
+                    style={{marginBottom:'20px'}}
+                    containerStyle={{marginTop:-40}}
+                        leftComponent={
+                            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+                            <Image
+                                style={{ width: 18, height: 16 }}
+                                source={require('../../assets/arrow.png')}
+                            
+                            />
+                          </TouchableOpacity>
+                        }
+                         centerComponent={<TitleHeader>{namePage}</TitleHeader>
+
+                        }
+                    />
                 <FullHeightScrollView>
                     <ContentResume>
+
                         <WrapperResume>
                             <View>
                                 <TextChart>$18.23</TextChart>
@@ -199,12 +219,12 @@ const Resume: React.FC<PropsResume> = ({ navigation }) => {
                         <InlineViewBetween>
                             <LightText>You’ve previously retired 28 credits of this asset</LightText>
                         </InlineViewBetween>
-                        
+
                         <CardInfo>
-                           <LightText>
-                             Please note that prices are for reference only and may vary at the time of excecuting a buy or sell order. 
-                             The information provided is not investment advice, and should not be used as a recommendation to buy or sell assets.
-                           </LightText>
+                            <LightText>
+                                Please note that prices are for reference only and may vary at the time of excecuting a buy or sell order.
+                                The information provided is not investment advice, and should not be used as a recommendation to buy or sell assets.
+                            </LightText>
                         </CardInfo>
                         <Button bg={theme.background.bgPrimary} color={theme.color.colorPrimary} border={theme.border.borderOutline} valueButton='buy' />
                     </ContentResume>

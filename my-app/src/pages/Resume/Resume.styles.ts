@@ -127,12 +127,19 @@ export const CardInfo = styled.View`
 flex-direction: row;
 padding: 10px;
 align-self: center;
-text-align: left;
 margin-top: 20px;
 margin-bottom: 20px;
 width: 335px;
 height: 115px;
 background: #F4F4F4;
 border-radius: 4px;
+`
+
+
+export const TitleHeader = styled.Text`
+ font-size: 20px;
+ font-weight: bold;
+ text-align: center;
+
 `
 
