@@ -38,7 +38,11 @@ const Login: React.FC<PropsLogin> = ({ navigation }) => {
                      </InputWraper>
                   </Content>
                   <Content>
-                  <Button  bg={theme.background.bgPrimary} color={theme.color.colorSecondary} border={theme.border.borderSecondary} valueButton='Login' onpress={() => navigation.navigate('CreateAccount')}/>
+                  <Button  bg={theme.background.bgPrimary} 
+                           color={theme.color.colorSecondary} 
+                           border={theme.border.borderSecondary} 
+                           valueButton='Login' 
+                           onpress={() => navigation.navigate('CreateAccount')}/>
                   </Content>
                </FullHeightScrollView>
             </SafeAreaContainer>

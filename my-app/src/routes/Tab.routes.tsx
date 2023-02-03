@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer,} from '@react-navigation/native';
+import { Text, View, Image } from 'react-native';
+import { NavigationContainer, } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -16,14 +16,15 @@ const Tab = createBottomTabNavigator();
 function Tabs() {
   return (
     <Tab.Navigator
+
       screenOptions={{
         tabBarStyle: {
           height: 80,
           paddingHorizontal: 35,
           paddingBottom: 20,
-          
+
         },
-        tabBarActiveTintColor: "#D35400",
+        tabBarActiveTintColor: "#770FDF",
         tabBarInactiveTintColor: "rgba(0, 0, 0, 0.5)",
       }}
     >
@@ -31,48 +32,47 @@ function Tabs() {
         name="Login"
         component={Login}
         options={{
-            tabBarStyle:{
-                display: 'none'
-            },
-        //   tabBarIcon: ({ size, color }) => (
-        //     <FontAwesome5 name="store" size={size} color={color} />
-        //   ),
+          tabBarStyle: {
+            display: 'none'
+          },
           headerShown: false,
+          tabBarButton: () => null,
         }}
       />
-       <Tab.Screen
+      <Tab.Screen
         name="Home"
         component={Home}
         options={{
-        //   tabBarIcon: ({ size, color }) => (
-        //     <FontAwesome5 name="store" size={size} color={color} />
-        //   ),
+          tabBarIcon: ({ size, color }) => (
+            <Image
+              style={{ width: 16, height: 21 }}
+              source={require('../assets/MenuHome.png')}
+            />
+          ),
           headerShown: false,
         }}
       />
       <Tab.Screen
         name="CreateAccount"
         component={CreateAccount}
+
         options={{
-        //   tabBarIcon: ({ size, color }) => (
-        //     <MaterialCommunityIcons
-        //       name="clipboard-list"
-        //       size={size}
-        //     />
-        //   ),
-          headerShown: false,
+          tabBarButton: () => null,
+          tabBarStyle: {
+            display: 'none'
+          },
         }}
       />
       <Tab.Screen
         name="Resume"
         component={Resume}
         options={{
-        //   tabBarIcon: ({ size, color }) => (
-        //     <MaterialCommunityIcons
-        //       name="clipboard-list"
-        //       size={size}
-        //     />
-        //   ),
+          tabBarIcon: ({ size, color }) => (
+            <Image
+              style={{ width: 16, height: 21 }}
+              source={require('../assets/MenuTrade.png')}
+            />
+          ),
           headerShown: false,
         }}
       />
