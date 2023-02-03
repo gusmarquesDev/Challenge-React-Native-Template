@@ -1,5 +1,4 @@
 import React, { useState, useEffect} from 'react'
-import { View, Text } from 'react-native'
 import { FullHeightScrollView, InputWraper } from '.././Login/Login.styles'
 import { SafeAreaKeyboardContainer, SafeAreaContainer } from '../../utils/screen/SafeArea'
 import { Content } from '../../utils/screen/Page'
@@ -8,9 +7,10 @@ import { Button } from '../../components/Button/Button'
 import { HeaderLoginFunnel } from '../../theme/globalStyles'
 import { MyCheckbox } from '../../components/CheckBox/MyCheckBox'
 import theme from '../../theme/theme'
-
+import { useDispatch } from 'react-redux'
 import { ErrorMensage } from './CreateAccount.styles'
-
+import { addDataUser} from '../../redux/sliceLanguages'
+import { ModalSystem } from '../../components/Modal/ ModalSystem'
 
 export type CreateAccount = {
 navigation
@@ -20,6 +20,8 @@ navigation
 const CreateAccount: React.FC<CreateAccount> = ({ navigation }) => {
    const [isCheck, setChecked] = useState(false)
    const [errorMensage, setError ] = useState('')
+   const [email, setEmail] = useState('')
+   const [ismodal, setIsModal] = useState<boolean>(false)
 
    const HandleCheck = () => {
      setChecked(!isCheck)
@@ -36,15 +38,23 @@ const CreateAccount: React.FC<CreateAccount> = ({ navigation }) => {
 
    }
 
-   const handlePassWord = (e) => {
+   const handleEmail = (e) => {
 
    }
 
+   const dispacth = useDispatch()
+
    const createAccount = () => {
       if(isCheck === false){
-         setError('Accpte de termns, please!!')
+         setError('Accept the terms please!')
       }else if(isCheck === true){
-         navigation.navigate('Login')
+         dispacth(addDataUser(email))
+        setIsModal(true)
+         setTimeout(() => {
+            setIsModal(false)
+            navigation.navigate('Login')
+         }, 2000);
+         
       }
    }
 
@@ -77,8 +87,9 @@ const CreateAccount: React.FC<CreateAccount> = ({ navigation }) => {
                      </InputWraper>
                      <InputWraper>
                         <Input
-                           label='Password'
-                           onChangeText={(e) => handlePassWord(e)}
+                           label='E-mail'
+                           value={email}
+                           onChangeText={(e) => setEmail(e)}
                         />
                      </InputWraper>
                      <MyCheckbox 
@@ -97,12 +108,16 @@ const CreateAccount: React.FC<CreateAccount> = ({ navigation }) => {
                       
                   </Content>
                   <ErrorMensage>{String(errorMensage)}</ErrorMensage>
+                  <ModalSystem
+                   visibleModal={ismodal}
+                 text={'you have a account!'}
+            />
                </FullHeightScrollView>
-               
+           
             </SafeAreaContainer>
-            
+           
          </SafeAreaKeyboardContainer>
-
+        
         
       </>
    )

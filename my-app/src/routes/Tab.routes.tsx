@@ -61,6 +61,7 @@ function Tabs() {
           tabBarStyle: {
             display: 'none'
           },
+          headerShown: false,
         }}
       />
       <Tab.Screen
