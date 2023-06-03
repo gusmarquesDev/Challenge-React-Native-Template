@@ -8,7 +8,7 @@ que o app contém.
 ## Algumas especificações 📝
 
 - O aplicativo foi desenvolvido utilizando o Expo.
-- instalar as dependências vom yarn.
+- instalar as dependências com yarn.
 - ao clonar o projeto, rodar "yarn install" para instalar todas depedências. 
 
 ## Pacotes utilizados
