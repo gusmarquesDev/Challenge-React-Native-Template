@@ -11,7 +11,6 @@ background-color: transparent;
 `
 export const TabsText = styled.Text<TabsProps>`
 ${({ bg }) => css`
-font-family: 'Sora';
 font-style: normal;
 font-weight: ${bg ? 600 : 400};
 font-size: 14px;

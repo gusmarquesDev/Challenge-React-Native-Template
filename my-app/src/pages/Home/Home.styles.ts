@@ -21,13 +21,11 @@ width: 33px;
 height: 33px;
 justify-content: center;
 align-items: center;
-border-radius: 50%;
 `
 export const TextWrapper = styled.Text`
 font-size: 14px;
 font-style: normal;
 line-height: 18px;
-letter-spacing: -0.02em;
 font-weight: bold;
 color: #000;
 `
@@ -42,7 +40,6 @@ font-size: 18px;
 line-height: 23px;
 display: flex;
 align-items: center;
-letter-spacing: -0.02em;
 margin-bottom: 10px;
 
 color: #000000;

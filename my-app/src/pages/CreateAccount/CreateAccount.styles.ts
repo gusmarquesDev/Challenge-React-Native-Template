@@ -12,7 +12,6 @@ line-height: 26px;
 display: flex;
 align-items: center;
 text-align: center;
-letter-spacing: -0.02em;
 color: #FFFFFF;
 `
 export const ErrorMensage = styled.Text`

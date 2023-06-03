@@ -20,12 +20,11 @@ align-items: center;
 `
 
 export const LabelWrapper = styled.Text`
-font-family: 'Sora';
+
 font-style: normal;
 font-weight: 400;
 font-size: 12px;
 line-height: 15px;
-letter-spacing: -0.02em;
 color: #000000;
 margin-top: 5px;
 
@@ -37,16 +36,14 @@ font-weight: 600;
 font-size: 24px;
 line-height: 30px;
 text-align: center;
-letter-spacing: -0.02em;
 color: #000000;
 `
 export const TitlePercent = styled.Text`
-font-family: 'Sora';
+
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 18px;
-letter-spacing: -0.02em;
 color: #0FDF8F;
 `
 export const WrapperInnline = styled.View`

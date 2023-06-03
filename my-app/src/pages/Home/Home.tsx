@@ -60,8 +60,9 @@ const Home: React.FC<PropsHome> = ({ navigation }) => {
    return (
       <>
          <SafeAreaContainer>
+            
             <Content>
-               <WrapperHeader>
+            <WrapperHeader>
                   <Avatar>
                      <Image
                         style={{ width: 16, height: 21 }}

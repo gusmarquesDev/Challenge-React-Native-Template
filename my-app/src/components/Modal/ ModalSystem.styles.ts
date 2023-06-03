@@ -12,7 +12,6 @@ export const Container = styled.View`
 export const ModalContainer = styled.View`
   background-color: #F4F4F4;
   padding: 20px;
-  border-radius: 10px;
   width: 80%;
   padding-top: 35px;
   height: 30%;

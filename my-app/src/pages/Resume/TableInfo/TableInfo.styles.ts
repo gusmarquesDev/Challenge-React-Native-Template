@@ -2,7 +2,6 @@ import { ScrollView } from 'react-native'
 import styled from "styled-components/native"
 
 export const TextResume = styled.Text`
-font-family: 'Sora';
 font-style: normal;
 font-weight: 400;
 text-align: left;
@@ -11,7 +10,6 @@ color: #000000;
 `
 
 export const LightTextResume = styled.Text`
-font-family: 'Sora';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;

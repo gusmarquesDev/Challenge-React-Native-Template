@@ -36,24 +36,22 @@ flex-direction: row;
 align-items: center;
 `
 export const TextChart = styled.Text`
-font-family: 'Sora';
+
 font-style: normal;
 font-weight: 600;
 font-size: 24px;
 line-height: 30px;
 text-align: center;
-letter-spacing: -0.02em;
 color: #000000;
 margin-bottom: 10px;
 `
 
 export const TextPercent = styled.Text`
-font-family: 'Sora';
+
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
 line-height: 18px;
-letter-spacing: -0.02em;
 color: #0FDF8F;
 `
 export const WrapperChart = styled.View`
@@ -66,7 +64,6 @@ width: auto;
 `
 
 export const TitleResume = styled.Text`
-font-family: 'Sora';
 font-style: normal;
 font-weight: 600;
 font-size: 17px;
@@ -75,7 +72,6 @@ margin-top:15px;
 margin-bottom: 20px;
 `
 export const TitleResumePortFolio = styled.Text`
-font-family: 'Sora';
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
@@ -86,7 +82,6 @@ margin-bottom: 20px;
 
 
 export const TextResume = styled.Text`
-font-family: 'Sora';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
@@ -108,7 +103,6 @@ align-items: center;
 `
 
 export const LightText = styled.Text`
-font-family: 'Sora';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
@@ -116,7 +110,6 @@ color: #A0A0A0;
 `
 
 export const LightTextCenter = styled.Text`
-font-family: 'Sora';
 font-style: normal;
 font-weight: 400;
 font-size: 14px;
@@ -132,7 +125,6 @@ margin-bottom: 20px;
 width: 335px;
 height: 115px;
 background: #F4F4F4;
-border-radius: 4px;
 `
 
 

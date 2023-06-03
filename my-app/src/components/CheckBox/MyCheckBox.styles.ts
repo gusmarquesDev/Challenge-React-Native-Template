@@ -12,7 +12,6 @@ export const Box = styled.TouchableOpacity<CheckBoxProps>`
     width:15px;
     height:15px;
     border:1px #000;
-    border-radius:5px;
     flex-direction: column;
     justify-content: center;
     align-items: center;

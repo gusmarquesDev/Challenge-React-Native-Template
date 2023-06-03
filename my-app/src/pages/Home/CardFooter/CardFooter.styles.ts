@@ -9,8 +9,8 @@ height: 215px;
 padding: 10px;
 margin-top: 15px;
 background: #F4F4F4;
-border-radius: 10px;
 margin-right: 10px;
+border-radius:7px;
 `
 
 export const TitleCardFooter = styled.Text`

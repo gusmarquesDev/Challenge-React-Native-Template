@@ -15,7 +15,6 @@ line-height: 26px;
 display: flex;
 align-items: center;
 text-align: center;
-letter-spacing: -0.02em;
 color: ${color ? color : '#fff'};
 `}`
 
@@ -29,5 +28,4 @@ padding: 16px 32px;
 background: ${bg ? bg : '#000'};
 border: ${border ? border : '#770FDF'};
 color: ${color ? color : '#fff'};
-border-radius: 4px;
 `}`

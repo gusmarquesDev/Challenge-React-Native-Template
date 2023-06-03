@@ -10,12 +10,11 @@ padding: 16px;
 `
 
 export const InputLabel = styled.Text`
-  font-family:'Sintony'
+
   font-style: normal;
   font-weight:400px;
   font-size:11px;
   line-height:14px;
-  letter-spacing: -0.02em;
   color:#A0A0A0;
 `
 
@@ -24,7 +23,6 @@ width:335px;
 height:48px;
 padding:10px;
 background-color:#F4F4F4;
-border-radius:4px;
 margin-bottom:15px;
 margin-top:5px;
 `
