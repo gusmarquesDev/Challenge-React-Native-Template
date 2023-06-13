@@ -22,6 +22,18 @@ que o app contém.
 ---
 
 ## Telas Vertical
+<img width="268" alt="login" src="https://github.com/gusmarquesDev/Challenge-React-Native-Template/assets/116916845/e53c2262-6174-4028-a343-f0e8f50cb5c6">
+
+<img width="263" alt="create" src="https://github.com/gusmarquesDev/Challenge-React-Native-Template/assets/116916845/0a0f8e64-fc94-4436-94b3-15e303ae4576">
+
+<img width="263" alt="home" src="https://github.com/gusmarquesDev/Challenge-React-Native-Template/assets/116916845/65d2b7d7-b07c-4fa5-9d43-f7029b3e2788">
+
+<img width="268" alt="Screen Shot 2023-06-13 at 15 26 14" src="https://github.com/gusmarquesDev/Challenge-React-Native-Template/assets/116916845/70494ff5-cadd-4539-9ff6-95034acb100a">
+
+<img width="263" alt="Screen Shot 2023-06-13 at 15 26 35" src="https://github.com/gusmarquesDev/Challenge-React-Native-Template/assets/116916845/27f40388-23a3-4a51-8390-b776245cedcf">
+
+
+Link figma Completo: https://www.figma.com/file/2bM4PxB3F33biwjvIbcncd/React-Native-Challenge-(Copy)?type=design&node-id=0-1&t=Vz81nTuvsq5qOcAt-0
 
 ### Possíveis erros ⚠️
 
